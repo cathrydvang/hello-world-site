@@ -1,0 +1,280 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "text": "When facing a major decision, you tend to:",
+      "context": "decision-making",
+      "choices": [
+        {
+          "text": "Research thoroughly and make a detailed plan",
+          "weights": { "C": 15, "O": 5 }
+        },
+        {
+          "text": "Go with your gut feeling and adapt as needed",
+          "weights": { "O": 15, "C": -5 }
+        },
+        {
+          "text": "Seek advice from trusted friends or family",
+          "weights": { "E": 10, "A": 10 }
+        },
+        {
+          "text": "Feel anxious and delay the decision",
+          "weights": { "N": 15, "C": -5 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "At a social gathering with mostly strangers, you:",
+      "context": "social",
+      "choices": [
+        {
+          "text": "Energetically introduce yourself to many people",
+          "weights": { "E": 20, "O": 5 }
+        },
+        {
+          "text": "Find one or two people for deeper conversation",
+          "weights": { "E": -5, "A": 10 }
+        },
+        {
+          "text": "Observe from the sidelines until approached",
+          "weights": { "E": -15, "N": 5 }
+        },
+        {
+          "text": "Leave early to recharge alone",
+          "weights": { "E": -20 }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "When someone shares a problem with you, your first instinct is to:",
+      "context": "relationships",
+      "choices": [
+        {
+          "text": "Offer practical solutions and advice",
+          "weights": { "C": 10, "A": -5 }
+        },
+        {
+          "text": "Listen empathetically and validate their feelings",
+          "weights": { "A": 20 }
+        },
+        {
+          "text": "Share a similar experience of your own",
+          "weights": { "E": 10, "O": 5 }
+        },
+        {
+          "text": "Feel uncomfortable and change the subject",
+          "weights": { "N": 10, "A": -10 }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Your workspace or living space is typically:",
+      "context": "habits",
+      "choices": [
+        {
+          "text": "Meticulously organized with everything in its place",
+          "weights": { "C": 20 }
+        },
+        {
+          "text": "Creatively messy but you know where things are",
+          "weights": { "O": 15, "C": -10 }
+        },
+        {
+          "text": "Functional but not a priority",
+          "weights": { "C": 0 }
+        },
+        {
+          "text": "Often chaotic and causes you stress",
+          "weights": { "N": 15, "C": -15 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "When learning something new, you prefer to:",
+      "context": "learning",
+      "choices": [
+        {
+          "text": "Dive in and experiment through trial and error",
+          "weights": { "O": 20, "E": 5 }
+        },
+        {
+          "text": "Follow a structured course or curriculum",
+          "weights": { "C": 15 }
+        },
+        {
+          "text": "Learn alongside others in a group setting",
+          "weights": { "E": 15, "A": 5 }
+        },
+        {
+          "text": "Take your time and master fundamentals first",
+          "weights": { "C": 10, "N": -5 }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "When plans suddenly change, you typically:",
+      "context": "stress",
+      "choices": [
+        {
+          "text": "Adapt quickly and see new possibilities",
+          "weights": { "O": 15, "N": -10 }
+        },
+        {
+          "text": "Feel frustrated but adjust eventually",
+          "weights": { "C": 5, "N": 10 }
+        },
+        {
+          "text": "Become quite stressed and need time to recalibrate",
+          "weights": { "N": 20, "C": 5 }
+        },
+        {
+          "text": "Immediately start making new plans",
+          "weights": { "C": 15, "E": 5 }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "In a team disagreement, you tend to:",
+      "context": "conflict",
+      "choices": [
+        {
+          "text": "Advocate strongly for your position",
+          "weights": { "E": 15, "A": -10 }
+        },
+        {
+          "text": "Look for compromise to maintain harmony",
+          "weights": { "A": 20 }
+        },
+        {
+          "text": "Analyze all perspectives before weighing in",
+          "weights": { "O": 10, "C": 10 }
+        },
+        {
+          "text": "Avoid the conflict and hope it resolves itself",
+          "weights": { "N": 10, "A": 5, "E": -10 }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Your approach to rules and conventions is:",
+      "context": "values",
+      "choices": [
+        {
+          "text": "Follow them - they exist for good reasons",
+          "weights": { "C": 15, "A": 5 }
+        },
+        {
+          "text": "Question them and break them when necessary",
+          "weights": { "O": 20, "C": -5 }
+        },
+        {
+          "text": "Respect them publicly but bend them privately",
+          "weights": { "C": 5, "A": -5 }
+        },
+        {
+          "text": "Feel anxious about breaking them even when appropriate",
+          "weights": { "N": 15, "C": 10 }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "After a long, demanding week, you prefer to:",
+      "context": "recovery",
+      "choices": [
+        {
+          "text": "Go out with friends to decompress",
+          "weights": { "E": 20, "A": 5 }
+        },
+        {
+          "text": "Spend quiet time alone with a book or hobby",
+          "weights": { "E": -15, "O": 5 }
+        },
+        {
+          "text": "Tackle personal projects you've been putting off",
+          "weights": { "C": 15 }
+        },
+        {
+          "text": "Rest but feel guilty about not being productive",
+          "weights": { "N": 15, "C": 5 }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "When imagining your future, you tend to:",
+      "context": "outlook",
+      "choices": [
+        {
+          "text": "Feel excited about many possibilities",
+          "weights": { "O": 15, "N": -10, "E": 5 }
+        },
+        {
+          "text": "Have a clear plan you're working toward",
+          "weights": { "C": 20 }
+        },
+        {
+          "text": "Worry about things that could go wrong",
+          "weights": { "N": 20 }
+        },
+        {
+          "text": "Focus on the present rather than the future",
+          "weights": { "O": -5, "N": -5 }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "text": "When you've made a mistake, you typically:",
+      "context": "self-reflection",
+      "choices": [
+        {
+          "text": "Analyze what went wrong and create systems to prevent it",
+          "weights": { "C": 15, "O": 5 }
+        },
+        {
+          "text": "Apologize quickly and move on",
+          "weights": { "A": 10, "E": 5 }
+        },
+        {
+          "text": "Dwell on it and feel bad for a while",
+          "weights": { "N": 20, "A": 5 }
+        },
+        {
+          "text": "Reframe it as a learning experience",
+          "weights": { "O": 15, "N": -10 }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "text": "In your ideal life, what matters most?",
+      "context": "values",
+      "choices": [
+        {
+          "text": "Achievement and making an impact",
+          "weights": { "C": 15, "E": 10 }
+        },
+        {
+          "text": "Deep relationships and connection",
+          "weights": { "A": 20, "E": 5 }
+        },
+        {
+          "text": "Freedom and new experiences",
+          "weights": { "O": 20, "E": 5 }
+        },
+        {
+          "text": "Security and peace of mind",
+          "weights": { "N": 10, "C": 10 }
+        }
+      ]
+    }
+  ]
+}

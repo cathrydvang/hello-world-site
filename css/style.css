@@ -1,0 +1,431 @@
+/* Forks - Minimalist Style */
+
+:root {
+    --bg-primary: #fafafa;
+    --bg-secondary: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --accent: #2d2d2d;
+    --accent-light: #4a4a4a;
+    --border: #e5e5e5;
+    --success: #4a7c59;
+    --warning: #c9a227;
+    --info: #4a6fa5;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --radius: 4px;
+    --transition: 0.2s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+#app {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    padding: var(--spacing-lg);
+    animation: fadeIn 0.3s ease;
+}
+
+.screen.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--spacing-xl);
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--spacing-sm);
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: var(--spacing-md);
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+.description {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.btn:hover {
+    background: var(--bg-primary);
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.btn.primary:hover {
+    background: var(--accent-light);
+}
+
+.btn.secondary {
+    background: transparent;
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    margin-bottom: var(--spacing-md);
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+.question-counter {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Assessment */
+.question-text {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.5;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.choice-btn {
+    padding: var(--spacing-md);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-secondary);
+    text-align: left;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.choice-btn:hover {
+    border-color: var(--accent);
+    background: var(--bg-primary);
+}
+
+/* OCEAN Display */
+.ocean-traits {
+    margin-bottom: var(--spacing-lg);
+}
+
+.trait-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.trait-label {
+    width: 140px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.trait-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-right: var(--spacing-sm);
+}
+
+.trait-fill {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.5s ease;
+}
+
+.trait-value {
+    width: 40px;
+    text-align: right;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.personality-labels {
+    padding: var(--spacing-md);
+    background: var(--bg-primary);
+    border-radius: var(--radius);
+    margin-bottom: var(--spacing-lg);
+}
+
+.personality-labels p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.personality-labels p:last-child {
+    margin-bottom: 0;
+}
+
+/* Simulation */
+.simulation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.badge {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.age {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.event-container {
+    margin-bottom: var(--spacing-lg);
+}
+
+.event-title {
+    margin-bottom: var(--spacing-sm);
+}
+
+.event-description {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.event-choices {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.event-choice-btn {
+    padding: var(--spacing-md);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-secondary);
+    text-align: left;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.event-choice-btn:hover {
+    border-color: var(--accent);
+}
+
+.event-choice-btn .choice-title {
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+}
+
+.event-choice-btn .choice-hint {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.trajectory-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.trajectory-tag {
+    padding: 2px 8px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Outcome */
+.outcome-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+}
+
+.trait-changes {
+    padding: var(--spacing-md);
+    background: var(--bg-primary);
+    border-radius: var(--radius);
+    margin-bottom: var(--spacing-lg);
+}
+
+.trait-change {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.trait-change:last-child {
+    margin-bottom: 0;
+}
+
+.trait-change.positive {
+    color: var(--success);
+}
+
+.trait-change.negative {
+    color: var(--warning);
+}
+
+.reflection-prompt {
+    padding: var(--spacing-md);
+    border-left: 3px solid var(--accent);
+    background: var(--bg-primary);
+    margin-bottom: var(--spacing-lg);
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+/* Timeline */
+.timeline {
+    margin-bottom: var(--spacing-lg);
+}
+
+.timeline-node {
+    display: flex;
+    margin-bottom: var(--spacing-md);
+}
+
+.timeline-marker {
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: var(--spacing-md);
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.timeline-content {
+    flex: 1;
+    padding-bottom: var(--spacing-md);
+    border-left: 2px solid var(--border);
+    padding-left: var(--spacing-md);
+    margin-left: -23px;
+}
+
+.timeline-node:last-child .timeline-content {
+    border-left-color: transparent;
+}
+
+.timeline-age {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+}
+
+.timeline-event {
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.timeline-choice {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.timeline-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .screen {
+        padding: var(--spacing-sm);
+    }
+
+    .container {
+        padding: var(--spacing-lg);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .timeline-actions {
+        flex-direction: column;
+    }
+}

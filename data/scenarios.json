@@ -1,0 +1,520 @@
+{
+  "scenarios": [
+    {
+      "id": "education_01",
+      "title": "The College Decision",
+      "life_stage": "early",
+      "age_range": [17, 19],
+      "context_tags": ["education", "identity", "direction"],
+      "description": "You've been accepted to multiple colleges. One is prestigious but far from home with a demanding program. Another is local, affordable, with a supportive community. A third offers a unique experimental program aligned with your unconventional interests.",
+      "choices": [
+        {
+          "id": "prestigious",
+          "title": "Choose the prestigious university",
+          "description": "High pressure but excellent career prospects",
+          "ocean_weights": { "C": 8, "O": 3, "N": 5 },
+          "trajectory_tags": ["achievement-focused", "ambitious"],
+          "outcome": "You thrive under pressure, building an impressive network. The workload is intense, and you sometimes wonder about the paths not taken.",
+          "stress_delta": 10
+        },
+        {
+          "id": "local",
+          "title": "Stay close to home",
+          "description": "Maintain your support network and save money",
+          "ocean_weights": { "A": 5, "N": -5, "C": 3 },
+          "trajectory_tags": ["security-oriented", "community-focused"],
+          "outcome": "You build deep roots in your community. The familiar environment provides stability, though part of you wonders about distant horizons.",
+          "stress_delta": -5
+        },
+        {
+          "id": "experimental",
+          "title": "Try the experimental program",
+          "description": "Unconventional path with uncertain outcomes",
+          "ocean_weights": { "O": 12, "C": -5 },
+          "trajectory_tags": ["exploratory", "unconventional"],
+          "outcome": "The program challenges your assumptions about education. You develop unique skills, though explaining your path to others proves challenging.",
+          "stress_delta": 5
+        }
+      ],
+      "reflection_prompts": [
+        "What pressures influenced your educational choices at that age?",
+        "How much of this decision was yours versus others' expectations?"
+      ]
+    },
+    {
+      "id": "career_01",
+      "title": "First Job Crossroads",
+      "life_stage": "early",
+      "age_range": [22, 25],
+      "context_tags": ["career", "identity", "stability"],
+      "description": "You've graduated and face your first major career decision. A stable corporate job offers good pay and clear advancement. A startup opportunity is exciting but risky. You could also take time to travel or pursue further education.",
+      "choices": [
+        {
+          "id": "corporate",
+          "title": "Take the corporate position",
+          "description": "Stability, benefits, and a clear career ladder",
+          "ocean_weights": { "C": 10, "N": -5 },
+          "trajectory_tags": ["security-oriented", "traditional"],
+          "outcome": "The structure provides security. You learn professional norms and build savings, though creative impulses sometimes feel constrained.",
+          "stress_delta": -5
+        },
+        {
+          "id": "startup",
+          "title": "Join the startup",
+          "description": "High risk, high potential reward",
+          "ocean_weights": { "O": 10, "E": 5, "N": 8 },
+          "trajectory_tags": ["exploratory", "risk-taking"],
+          "outcome": "The chaos is exhilarating. You wear many hats and grow rapidly, though the uncertainty keeps you up some nights.",
+          "stress_delta": 15
+        },
+        {
+          "id": "gap_year",
+          "title": "Take a gap year",
+          "description": "Travel, explore, figure things out",
+          "ocean_weights": { "O": 15, "C": -8 },
+          "trajectory_tags": ["exploratory", "self-discovery"],
+          "outcome": "The experiences broaden your perspective immensely. Returning to 'normal life' feels different, and you see paths others don't.",
+          "stress_delta": 5
+        }
+      ],
+      "reflection_prompts": [
+        "What did 'success' mean to you at this stage?",
+        "Whose definition of a good career were you following?"
+      ]
+    },
+    {
+      "id": "relationship_01",
+      "title": "Love and Distance",
+      "life_stage": "early",
+      "age_range": [23, 28],
+      "context_tags": ["relationships", "career", "identity"],
+      "description": "You're in a meaningful relationship when your partner receives an opportunity in another city. They ask you to come with them. Your own career is just gaining momentum where you are.",
+      "choices": [
+        {
+          "id": "move_together",
+          "title": "Move with your partner",
+          "description": "Prioritize the relationship over career",
+          "ocean_weights": { "A": 12, "O": 5, "C": -3 },
+          "trajectory_tags": ["relationship-focused", "adaptable"],
+          "outcome": "Starting fresh together strengthens your bond. Building a new career takes time, but the relationship grows deeper.",
+          "stress_delta": 10
+        },
+        {
+          "id": "long_distance",
+          "title": "Try long distance",
+          "description": "Maintain both the relationship and your path",
+          "ocean_weights": { "C": 8, "N": 8 },
+          "trajectory_tags": ["balanced", "persistent"],
+          "outcome": "The distance tests you both. Some couples grow stronger; others drift apart. The uncertainty is constant.",
+          "stress_delta": 15
+        },
+        {
+          "id": "end_it",
+          "title": "End the relationship",
+          "description": "Acknowledge different life directions",
+          "ocean_weights": { "C": 5, "A": -8, "N": 10 },
+          "trajectory_tags": ["self-focused", "pragmatic"],
+          "outcome": "The grief is real, but so is the freedom. You dive into your work and personal growth, wondering sometimes about what might have been.",
+          "stress_delta": 20
+        }
+      ],
+      "reflection_prompts": [
+        "How do you balance personal ambition with commitment to others?",
+        "What fears influenced this kind of decision?"
+      ]
+    },
+    {
+      "id": "career_02",
+      "title": "The Promotion Dilemma",
+      "life_stage": "mid",
+      "age_range": [28, 35],
+      "context_tags": ["career", "identity", "stability"],
+      "description": "You're offered a significant promotion. It means more money and status, but also longer hours, more stress, and managing people you currently consider friends.",
+      "choices": [
+        {
+          "id": "accept_promotion",
+          "title": "Accept the promotion",
+          "description": "Embrace the opportunity and its demands",
+          "ocean_weights": { "C": 10, "E": 5, "A": -5 },
+          "trajectory_tags": ["achievement-focused", "leadership"],
+          "outcome": "Leadership suits you in some ways, challenges you in others. The relationships with former peers shift, sometimes painfully.",
+          "stress_delta": 15
+        },
+        {
+          "id": "negotiate",
+          "title": "Negotiate different terms",
+          "description": "Try to reshape the role to fit your values",
+          "ocean_weights": { "O": 8, "A": 5, "C": 5 },
+          "trajectory_tags": ["balanced", "assertive"],
+          "outcome": "The negotiation reveals what matters to you. Whether successful or not, you've defined your boundaries.",
+          "stress_delta": 5
+        },
+        {
+          "id": "decline",
+          "title": "Decline the promotion",
+          "description": "Preserve your current balance and relationships",
+          "ocean_weights": { "A": 10, "N": -5, "C": -5 },
+          "trajectory_tags": ["relationship-focused", "contentment"],
+          "outcome": "Others are surprised. You keep what matters to you, though questions about ambition linger. Peace has its own value.",
+          "stress_delta": -10
+        }
+      ],
+      "reflection_prompts": [
+        "What does success mean beyond external markers?",
+        "How do power dynamics affect your relationships?"
+      ]
+    },
+    {
+      "id": "family_01",
+      "title": "The Parenting Question",
+      "life_stage": "mid",
+      "age_range": [28, 38],
+      "context_tags": ["family", "identity", "purpose"],
+      "description": "The question of children becomes unavoidable. Your partner has clear feelings one way. Family and society have expectations. Your own feelings are... complicated.",
+      "choices": [
+        {
+          "id": "have_children",
+          "title": "Decide to have children",
+          "description": "Embrace parenthood with its transformation",
+          "ocean_weights": { "A": 10, "C": 8, "O": -3 },
+          "trajectory_tags": ["caregiver", "traditional"],
+          "outcome": "Nothing prepares you for this change. Identity, priorities, everything shifts. The love is profound; so is the exhaustion.",
+          "stress_delta": 20
+        },
+        {
+          "id": "child_free",
+          "title": "Choose to be child-free",
+          "description": "Define family and purpose differently",
+          "ocean_weights": { "O": 10, "A": -3, "C": -3 },
+          "trajectory_tags": ["unconventional", "self-directed"],
+          "outcome": "You build a life rich in other ways. Some relationships shift as peers become parents. Freedom takes many forms.",
+          "stress_delta": -5
+        },
+        {
+          "id": "postpone",
+          "title": "Postpone the decision",
+          "description": "Not ready to commit either way",
+          "ocean_weights": { "N": 10, "O": 5 },
+          "trajectory_tags": ["uncertain", "reflective"],
+          "outcome": "Time passes. The window shifts but doesn't close immediately. The ongoing uncertainty is its own weight.",
+          "stress_delta": 10
+        }
+      ],
+      "reflection_prompts": [
+        "Whose voice was loudest in this decision?",
+        "What fears or hopes drove your thinking about family?"
+      ]
+    },
+    {
+      "id": "health_01",
+      "title": "The Wake-Up Call",
+      "life_stage": "mid",
+      "age_range": [35, 50],
+      "context_tags": ["health", "identity", "mortality"],
+      "description": "A health scare—yours or someone close to you—forces a confrontation with mortality and lifestyle. The doctors recommend significant changes. Your current life is built around habits that now seem risky.",
+      "choices": [
+        {
+          "id": "transform",
+          "title": "Commit to major lifestyle change",
+          "description": "Restructure your life around health",
+          "ocean_weights": { "C": 15, "N": -5, "O": 5 },
+          "trajectory_tags": ["health-focused", "disciplined"],
+          "outcome": "The transformation is difficult but real. Old pleasures give way to new ones. Some relationships don't survive the change.",
+          "stress_delta": 10
+        },
+        {
+          "id": "moderate",
+          "title": "Make moderate adjustments",
+          "description": "Balance health with quality of life",
+          "ocean_weights": { "C": 5, "A": 5 },
+          "trajectory_tags": ["balanced", "pragmatic"],
+          "outcome": "You find a middle path. Progress is slower but sustainable. The fear fades; hopefully the habits remain.",
+          "stress_delta": 0
+        },
+        {
+          "id": "denial",
+          "title": "Struggle to change",
+          "description": "Old patterns are hard to break",
+          "ocean_weights": { "N": 15, "C": -10 },
+          "trajectory_tags": ["avoidant", "struggling"],
+          "outcome": "You try, fail, try again. Change is harder than willpower. Shame and fear compete with comfort and habit.",
+          "stress_delta": 15
+        }
+      ],
+      "reflection_prompts": [
+        "What relationship do you have with your body and its limits?",
+        "How does mortality shape your choices?"
+      ]
+    },
+    {
+      "id": "career_03",
+      "title": "The Burnout Crossroads",
+      "life_stage": "mid",
+      "age_range": [32, 45],
+      "context_tags": ["career", "health", "identity"],
+      "description": "Success came, but at a cost. You're exhausted, disconnected from what once motivated you. Something has to change, but your responsibilities and identity are tied to this path.",
+      "choices": [
+        {
+          "id": "radical_change",
+          "title": "Make a radical career change",
+          "description": "Start over in a new field",
+          "ocean_weights": { "O": 15, "C": -5, "N": 10 },
+          "trajectory_tags": ["exploratory", "courageous"],
+          "outcome": "The leap is terrifying and liberating. Starting over at this stage brings humility and unexpected growth.",
+          "stress_delta": 20
+        },
+        {
+          "id": "sabbatical",
+          "title": "Take an extended break",
+          "description": "Rest and reflect before deciding",
+          "ocean_weights": { "O": 8, "N": -5, "C": -3 },
+          "trajectory_tags": ["reflective", "self-aware"],
+          "outcome": "Time away reveals things hidden by busyness. Clarity comes slowly, but it comes. Re-entry is its own challenge.",
+          "stress_delta": -15
+        },
+        {
+          "id": "push_through",
+          "title": "Push through and adapt",
+          "description": "Find ways to cope within current path",
+          "ocean_weights": { "C": 10, "N": 10, "A": 5 },
+          "trajectory_tags": ["persistent", "enduring"],
+          "outcome": "You find small adjustments that help. The underlying issues remain, managed if not solved. Resilience has limits.",
+          "stress_delta": 5
+        }
+      ],
+      "reflection_prompts": [
+        "What signals of exhaustion did you ignore, and why?",
+        "What would 'enough' look like for you?"
+      ]
+    },
+    {
+      "id": "identity_01",
+      "title": "The Authentic Self",
+      "life_stage": "mid",
+      "age_range": [30, 50],
+      "context_tags": ["identity", "relationships", "authenticity"],
+      "description": "You've been hiding or suppressing a core part of yourself—your beliefs, orientation, values, or true aspirations. The cost of hiding grows heavier. But revealing yourself risks relationships and stability.",
+      "choices": [
+        {
+          "id": "reveal",
+          "title": "Live authentically and openly",
+          "description": "Accept the consequences of truth",
+          "ocean_weights": { "O": 15, "E": 8, "N": 5 },
+          "trajectory_tags": ["authentic", "courageous"],
+          "outcome": "Some relationships deepen; others break. The relief of authenticity competes with grief over losses. You become more yourself.",
+          "stress_delta": 15
+        },
+        {
+          "id": "selective",
+          "title": "Reveal selectively to safe people",
+          "description": "Build a support system gradually",
+          "ocean_weights": { "A": 5, "C": 5, "N": 5 },
+          "trajectory_tags": ["cautious", "strategic"],
+          "outcome": "You find your people, one by one. Living in two worlds is exhausting but feels safer. Boundaries become crucial.",
+          "stress_delta": 10
+        },
+        {
+          "id": "suppress",
+          "title": "Continue concealing for now",
+          "description": "Protect stability and relationships",
+          "ocean_weights": { "N": 15, "A": 8, "O": -10 },
+          "trajectory_tags": ["protective", "conflicted"],
+          "outcome": "External life remains stable. Internal life grows heavier. The question doesn't go away—it just waits.",
+          "stress_delta": 15
+        }
+      ],
+      "reflection_prompts": [
+        "What parts of yourself have you hidden, and at what cost?",
+        "What would safety look like for your true self?"
+      ]
+    },
+    {
+      "id": "family_02",
+      "title": "The Caregiver's Burden",
+      "life_stage": "mid",
+      "age_range": [40, 55],
+      "context_tags": ["family", "health", "duty"],
+      "description": "An aging parent needs significant care. Siblings disagree about responsibility. Your own life—career, family, health—already feels stretched. Cultural and personal expectations weigh heavily.",
+      "choices": [
+        {
+          "id": "primary_caregiver",
+          "title": "Become the primary caregiver",
+          "description": "Sacrifice your own priorities for family duty",
+          "ocean_weights": { "A": 15, "C": -5, "N": 10 },
+          "trajectory_tags": ["caregiver", "dutiful"],
+          "outcome": "The bond with your parent deepens. Your other relationships and goals suffer. Resentment and love coexist uncomfortably.",
+          "stress_delta": 25
+        },
+        {
+          "id": "shared_care",
+          "title": "Insist on shared responsibility",
+          "description": "Set boundaries while still contributing",
+          "ocean_weights": { "C": 10, "A": -5, "E": 5 },
+          "trajectory_tags": ["balanced", "assertive"],
+          "outcome": "Family tensions rise before they settle. Not everyone is happy, but the system is more sustainable. Guilt visits sometimes.",
+          "stress_delta": 15
+        },
+        {
+          "id": "professional_care",
+          "title": "Arrange professional care",
+          "description": "Provide support differently than expected",
+          "ocean_weights": { "C": 8, "A": -10, "N": 10 },
+          "trajectory_tags": ["pragmatic", "conflicted"],
+          "outcome": "The practical solution meets resistance. Cultural expectations clash with reality. You question your own values and limits.",
+          "stress_delta": 20
+        }
+      ],
+      "reflection_prompts": [
+        "What obligations do we have to those who raised us?",
+        "How do you balance self-care with care for others?"
+      ]
+    },
+    {
+      "id": "meaning_01",
+      "title": "The Meaning Crisis",
+      "life_stage": "later",
+      "age_range": [45, 60],
+      "context_tags": ["meaning", "legacy", "purpose"],
+      "description": "You've achieved much of what you set out to do—or haven't, and time is running out. Either way, a profound question emerges: what has it all meant? What matters in the time remaining?",
+      "choices": [
+        {
+          "id": "legacy_project",
+          "title": "Pursue a meaningful legacy project",
+          "description": "Create something that outlasts you",
+          "ocean_weights": { "C": 10, "O": 10, "N": -5 },
+          "trajectory_tags": ["legacy-focused", "purposeful"],
+          "outcome": "Purpose returns with new urgency. The project may succeed or fail—the meaning comes from the pursuit itself.",
+          "stress_delta": 10
+        },
+        {
+          "id": "relationships",
+          "title": "Invest deeply in relationships",
+          "description": "Find meaning in connection, not achievement",
+          "ocean_weights": { "A": 15, "E": 8 },
+          "trajectory_tags": ["relationship-focused", "present"],
+          "outcome": "You repair some bridges, deepen others. Achievement fades; presence remains. Not everyone understands the shift.",
+          "stress_delta": -10
+        },
+        {
+          "id": "acceptance",
+          "title": "Practice acceptance of what is",
+          "description": "Let go of striving for meaning",
+          "ocean_weights": { "O": 8, "N": -10, "C": -5 },
+          "trajectory_tags": ["contemplative", "accepting"],
+          "outcome": "The struggle for meaning softens. What remains is simpler, quieter. Peace comes not from answers but from releasing questions.",
+          "stress_delta": -15
+        }
+      ],
+      "reflection_prompts": [
+        "What would you want to be remembered for?",
+        "How has your definition of success evolved?"
+      ]
+    },
+    {
+      "id": "loss_01",
+      "title": "Profound Loss",
+      "life_stage": "any",
+      "age_range": [25, 70],
+      "context_tags": ["loss", "grief", "resilience"],
+      "is_trauma": true,
+      "description": "Someone central to your life is gone—through death, abandonment, or irreversible circumstance. The world continues, but you've been fundamentally altered. How do you carry this?",
+      "choices": [
+        {
+          "id": "community",
+          "title": "Lean into community and support",
+          "description": "Let others help carry the weight",
+          "ocean_weights": { "E": 10, "A": 10, "N": 5 },
+          "trajectory_tags": ["connected", "healing"],
+          "outcome": "Grief shared is grief transformed, not erased. You learn to receive care. The loss remains; the isolation doesn't.",
+          "stress_delta": 10
+        },
+        {
+          "id": "solitary",
+          "title": "Process privately and internally",
+          "description": "Grieve in your own way and time",
+          "ocean_weights": { "E": -10, "N": 10, "O": 5 },
+          "trajectory_tags": ["solitary", "internal"],
+          "outcome": "You develop your own relationship with loss. Others may not understand your timeline. Healing happens invisibly.",
+          "stress_delta": 15
+        },
+        {
+          "id": "action",
+          "title": "Channel grief into action",
+          "description": "Transform pain into purpose",
+          "ocean_weights": { "C": 10, "O": 8, "E": 5 },
+          "trajectory_tags": ["transformative", "active"],
+          "outcome": "The energy of grief becomes fuel. You create something meaningful from destruction. The pain persists but has somewhere to go.",
+          "stress_delta": 10
+        }
+      ],
+      "reflection_prompts": [
+        "How has loss shaped who you've become?",
+        "What did this loss teach you about what matters?"
+      ],
+      "duress_modifier": true
+    },
+    {
+      "id": "disruption_01",
+      "title": "Economic Upheaval",
+      "life_stage": "any",
+      "age_range": [25, 60],
+      "context_tags": ["career", "stability", "resilience"],
+      "global_modifier": "recession",
+      "description": "External forces beyond your control have upended your financial stability. Job loss, market collapse, or industry disruption—the security you built is suddenly gone.",
+      "choices": [
+        {
+          "id": "reinvent",
+          "title": "Reinvent yourself professionally",
+          "description": "Use crisis as catalyst for change",
+          "ocean_weights": { "O": 15, "C": 5, "N": 5 },
+          "trajectory_tags": ["adaptive", "resilient"],
+          "outcome": "The forced change opens unexpected doors. Skills transfer in surprising ways. The crisis becomes a pivot point.",
+          "stress_delta": 15
+        },
+        {
+          "id": "persist",
+          "title": "Persist in your field despite hardship",
+          "description": "Wait out the storm in familiar territory",
+          "ocean_weights": { "C": 15, "N": 10 },
+          "trajectory_tags": ["persistent", "traditional"],
+          "outcome": "You endure what others couldn't. The recovery is slow but you emerge with field intact. Scars remain.",
+          "stress_delta": 20
+        },
+        {
+          "id": "security",
+          "title": "Prioritize immediate security",
+          "description": "Take any available stability",
+          "ocean_weights": { "C": 5, "A": 5, "N": 10 },
+          "trajectory_tags": ["security-oriented", "pragmatic"],
+          "outcome": "You survive. Dreams defer but don't die. Stability returns slowly. The experience changes your relationship with security.",
+          "stress_delta": 15
+        }
+      ],
+      "reflection_prompts": [
+        "What did financial insecurity reveal about your values?",
+        "How did external circumstances shape what felt possible?"
+      ]
+    }
+  ],
+  "global_modifiers": {
+    "recession": {
+      "name": "Economic Recession",
+      "effects": { "opportunity_scarcity": true, "stress_baseline": 10 }
+    },
+    "pandemic": {
+      "name": "Global Pandemic",
+      "effects": { "extraversion_penalty": -10, "neuroticism_boost": 10 }
+    }
+  },
+  "trajectory_descriptions": {
+    "achievement-focused": "Driven by accomplishment and external markers of success",
+    "security-oriented": "Values stability, predictability, and safety",
+    "exploratory": "Drawn to novelty, change, and new experiences",
+    "relationship-focused": "Prioritizes connection and care for others",
+    "caregiver": "Finds meaning in nurturing and supporting others",
+    "unconventional": "Charts a path outside traditional expectations",
+    "authentic": "Committed to living true to inner values",
+    "contemplative": "Oriented toward reflection and inner life",
+    "resilient": "Develops strength through adversity"
+  }
+}

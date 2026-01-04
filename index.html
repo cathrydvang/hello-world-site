@@ -3,23 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            color: #333;
-        }
-    </style>
+    <title>Forks - Life Simulation</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <div id="app">
+        <!-- Welcome Screen -->
+        <section id="welcome-screen" class="screen active">
+            <div class="container">
+                <h1>Forks</h1>
+                <p class="subtitle">A personality-driven life simulation</p>
+                <p class="description">Explore the branching paths of life decisions. Discover how your personality shapes your journey through hypothetical futures.</p>
+                <button id="start-btn" class="btn primary">Begin Exploration</button>
+            </div>
+        </section>
+
+        <!-- Assessment Screen -->
+        <section id="assessment-screen" class="screen">
+            <div class="container">
+                <div class="progress-bar">
+                    <div id="assessment-progress" class="progress-fill"></div>
+                </div>
+                <p id="question-counter" class="question-counter">Question 1 of 12</p>
+                <div id="question-container">
+                    <p id="question-text" class="question-text"></p>
+                    <div id="choices-container" class="choices"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Screen -->
+        <section id="profile-screen" class="screen">
+            <div class="container">
+                <h2>Your Profile</h2>
+                <div id="ocean-display" class="ocean-traits"></div>
+                <div id="personality-labels" class="personality-labels"></div>
+                <button id="begin-simulation-btn" class="btn primary">Begin Simulation</button>
+            </div>
+        </section>
+
+        <!-- Simulation Screen -->
+        <section id="simulation-screen" class="screen">
+            <div class="container">
+                <div class="simulation-header">
+                    <span id="life-stage-badge" class="badge">Early Life</span>
+                    <span id="age-display" class="age">Age: 18</span>
+                </div>
+                <div id="event-container" class="event-container">
+                    <h3 id="event-title" class="event-title"></h3>
+                    <p id="event-description" class="event-description"></p>
+                    <div id="event-choices" class="event-choices"></div>
+                </div>
+                <div id="trajectory-tags" class="trajectory-tags"></div>
+            </div>
+        </section>
+
+        <!-- Outcome Screen -->
+        <section id="outcome-screen" class="screen">
+            <div class="container">
+                <h2>Outcome</h2>
+                <p id="outcome-text" class="outcome-text"></p>
+                <div id="trait-changes" class="trait-changes"></div>
+                <div id="reflection-prompt" class="reflection-prompt"></div>
+                <button id="continue-btn" class="btn primary">Continue</button>
+            </div>
+        </section>
+
+        <!-- Timeline Screen -->
+        <section id="timeline-screen" class="screen">
+            <div class="container">
+                <h2>Your Journey</h2>
+                <div id="timeline-visualization" class="timeline"></div>
+                <div class="timeline-actions">
+                    <button id="new-simulation-btn" class="btn secondary">New Simulation</button>
+                    <button id="explore-branch-btn" class="btn primary">Explore Different Path</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/personality.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
